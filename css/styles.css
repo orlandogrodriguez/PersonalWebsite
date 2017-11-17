@@ -1,11 +1,13 @@
 @font-face { font-family: "Circular Std"; src: url('../CircularStd-Book.otf'); }
 
 body {
-
+    height: 100%;
     font-family: "Circular Std", "Helvetica Neue";
     /*background-color: #22A7F0;*/
     background-color: #EEEEEE;
 }
+
+
 
 .section {
     /* background-color: #FFFFFF;*/
@@ -19,9 +21,9 @@ body {
 }
 
 .jumbotron {
+    height: 100%;
     background-image: url("../media/splash.jpg");
     background-size: cover;
-    height: 725px;
     background-attachment: fixed;
 }
 
@@ -41,10 +43,7 @@ body {
 }
 
 .jumbotron-fluid {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-.jumbotron-fluid {
+    height: 100%;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
