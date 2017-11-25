@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.0/d3.min.js"></script>
     <script src="js/radarChart.js" charset="utf-8"></script>
 </head>
@@ -19,8 +21,12 @@
 <div id="home">
     <div class="jumbotron jumbotron-fluid">
         <div class="container" style="text-align: center; color: #EEEEEE">
-            <H1>ORLANDO G. RODRIGUEZ</H1>
-            <p>Electrical Engineer  |  iOS Developer  |  Web Developer</p>
+            <div class="row align-items-center">
+                <div class="col">
+                    <H1>ORLANDO G. RODRIGUEZ</H1>
+                    <p>Electrical Engineer  |  iOS Developer  |  Web Developer</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -117,6 +123,57 @@
     </div>
 </div>
 
+<!--Projects-->
+<div class="container-fluid" style="background-color: #FFFFFF; color: #031A26">
+    <div class="container">
+        <div class="section row text-center align-items-center">
+            <div class="col">
+                <H1 style="color: #F23B46">Recent Projects</H1>
+            </div>
+        </div>
+        <div class="row text-center align-items-start">
+            <div id="smartvanity" class="col-lg-3"  style="height: 200px">
+                <img class="icon-edu" src="media/gt@2x.png">
+                <h4>SmartVanity</h4>
+                <p style="line-height: 12px">Smart Mirror</p>
+            </div>
+            <div id="playground" class="col-lg-3" style="height: 200px">
+                <img class="icon-code" src="media/sto@2x.png">
+                <h4>Playground</h4>
+                <p style="line-height: 12px">iOS Application</p>
+            </div>
+            <div id="fridgehound" class="col-lg-3" style="height: 200px">
+                <img class="icon-edu" src="media/delta@2x.png">
+                <h4>FridgeHound</h4>
+                <p style="line-height: 12px">Smart Tupperware</p>
+            </div>
+            <div id="freebites" class="col-lg-3" style="height: 200px">
+                <img class="icon-edu" src="media/adp@2x.png">
+                <h4>FreeBites</h4>
+                <p style="line-height: 12px">iOS Application</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Projects Detail-->
+<div id="projects-detail" class="container-fluid" style="background-color: #F23B46; color: #FFFFFF">
+    <div>
+        <div class="section row  align-items-center" style="padding: 0px">
+            <div class="col-lg-6 text-center" style="padding: 44px">
+                <!--<H1 id="work-name" style="line-height: 32px">Company Name</H1>-->
+                <H2 id="work-position" style="line-height: 24px">Position Name</H2>
+                <p id="work-date" style="line-height: 12px">Start Date - End Date</p>
+            </div>
+            <div class="col-lg-6 text-left" style="color: #000000; padding: 44px; padding-right: 88px; background-color: #FFFFFF">
+                <p id="work-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button type="button" class="btn btn-primary">More Info</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--Skills-->
 <div class="container-fluid" style="background-color: #FFFFFF; color: #031A26">
     <div class="container">
@@ -142,6 +199,28 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid" style="background-color: #22313F; color: #EEEEEE">
+    <div class="container text-center">
+        <H1><br>Contact Me</H1>
+        <p>Need a website or an app? I'll make one for you.</p>
+        <hr>
+        <p>787.216.5505<br>
+            orodriguez8@gatech.edu<br>
+            Atlanta, GA<br>
+            <hr>
+            <a href="https://github.com/orlandogrodriguez" style="color: #EEEEEE">GitHub</a><br>
+            <a href="https://www.linkedin.com/in/orlando-g-rodriguez/" style="color: #EEEEEE">LinkedIn</a>
+
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+
+
 
 <script>
     //////////////////////////////////////////////////////////////
@@ -210,7 +289,6 @@
     };
 
     // Draw the chart, get a reference the created svg element :
-    let svg_radar1 = RadarChart(".radarChart", conceptsData, radarChartOptions);
 
     var radarChartOptions3 = {
         w: 290 * .6,
@@ -224,12 +302,10 @@
     };
 
     // Draw the chart, get a reference the created svg element :
-    et svg_radar1 = RadarChart(".radarChart", conceptsData, radarChartOptions);
+    let svg_radar1 = RadarChart(".radarChart", conceptsData, radarChartOptions);
     let svg_radar2 = RadarChart(".radarChart2", languagesData, radarChartOptions);
     let svg_radar3 = RadarChart(".radarChart3", frameworksData, radarChartOptions3);
 </script>
-
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
